@@ -7,6 +7,9 @@ userPreferencesErrorName='Failed to copy UserPreferences.xml'
 filepath_keyCommands='/Users/eidas/Library/Preferences/Cubase 14/Key Commands.xml'
 keyCommandsErrorName='Failed to copy Key Commands.xml'
 
+filepath_pluginManager='/Users/eidas/Library/Preferences/Cubase 14/PluginManager.xml'
+pluginManagerErrorName='Failed to copy PluginManager.xml'
+
 dirpath_projectLogicalEditor='/Users/eidas/Documents/Steinberg/Cubase/User Presets/Project Logical Editor'
 projectLogicalEditorError='Failed to copy project logical editor directory'
 
@@ -21,6 +24,9 @@ cp "$filepath_userPreferences" . || touch "$userPreferencesErrorName"
 
 rm -f "$keyCommandsErrorName"
 cp "$filepath_keyCommands" . || touch "$keyCommandsErrorName"
+
+rm -f "$pluginManagerErrorName"
+cp "$filepath_pluginManager" . || touch "$pluginManagerErrorName"
 
 rm -f "$projectLogicalEditorError"
 cp -r "$dirpath_projectLogicalEditor" . || touch "$projectLogicalEditorError"
